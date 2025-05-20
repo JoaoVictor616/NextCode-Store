@@ -78,10 +78,13 @@ header nav ul li:hover::after {
     justify-content: center;
     align-items: center;
     opacity: 0;
+    transform: translateX(100vw);
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
 }
 
 .active {
     opacity: 1;
+    transform: translateX(0);
 }
 
 .product-img {
@@ -92,6 +95,16 @@ header nav ul li:hover::after {
     justify-content: center;
     position: relative;
     z-index: 2;
+    /*animação*/
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.7s;
+}
+
+.active .product-img {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .product-img img {
@@ -117,6 +130,16 @@ header nav ul li:hover::after {
     font-weight: 600;
     letter-spacing: 2px;
     margin-bottom: 10px;
+    /*animação*/
+    transform: translateX(400px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.7s;
+}
+
+.active .product-tag {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .product-name {
@@ -124,6 +147,16 @@ header nav ul li:hover::after {
     font-family: "Orbitron", sans-serif;
     line-height: 1.1;
     margin-bottom: 20px;
+    /*animação*/
+    transform: translateX(600px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.7s;
+}
+
+.active .product-name {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .description {
@@ -132,6 +165,16 @@ header nav ul li:hover::after {
     line-height: 1.6;
     margin-bottom: 30px;
     max-width: 600px;
+    /*animação*/
+    transform: translateX(800px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.7s;
+}
+
+.active .description {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .btn {
@@ -143,10 +186,20 @@ header nav ul li:hover::after {
     font-weight: 600;
     cursor: pointer;
     border: none;
+    /*animação*/
+    transform: translateX(1000px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.7s;
 }
 
-.btn:hover {
-    transform: scale(1.1);
+.active .btn {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+}
+
+.active .btn:hover {
+    transform: translateX(0) scale(2.0);
 }
 
 .arrows {
